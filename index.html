@@ -3,41 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/ícone.jpg">
+    
     <title>Encriptador</title>
 </head>
 <body> 
 <div  class="container">
     <header class="header">
         <h1 class="header_h1"> 
+
             <a href="#" class="header_alura">
-                <img class="header_img" src="img/alura.jpg" alt="logo Alura" title="Alura">
+                <img class="header_img" src="img/alura.svg" alt="logo Alura" title="Alura">
             </a>
         </h1>
     </header>
-     <form class="form_textArea">
-         <textarea class="textarea" id="text_encrypt" placeholder="Digite seu texto"></textarea>
+     <form class="form_text">
+
+         <textarea class="text_area" id="notify" placeholder="Digite seu texto"></textarea>
+
          <div class="form_notice text">
-            <img  class ="icon_alert" src="img/icone.jpg" alt="Alert" loading="lazy">
-            <p class="p_notice disable" id="text_icon">Apenas letras mínusculas e sem acento</p>
+
+            <img  class ="icon_alert" src="img/icone.svg" alt="Alert" loading="lazy">
+
+
+            <p class="p_notice disable" id="notice">Apenas letras mínusculas e sem acento</p>
          </div>
+
          <div class="buttons_form">
-            <button class="bnt_encrypt" onclick="">Encriptar</button>
-            <button class="bnt_decrypt" onclick="">Desencriptar</button>
+            
+            <button class="bnt_encrypt" onclick="encriptar(event);">Encriptar</button>
+            <button class="bnt_encrypt  bnt_encrypt--decrypt" onclick="desencriptar(event);">Desencriptar</button>
     
          </div>
      </form>
 
      <div class="code_area">
-        <div class="decode_clear" id="decode_clear"></div>
-        <img src="decode_img" scr="img/search.jpg" alt="search" loading="lazy">
+
+        <div class="decode_clear" id="decode"></div>
+
+        <img  class="decode_img" src="img/search.svg" alt="search" loading="lazy">
+
         <div class="message_decode">
+
             <p class="problem_decode">Nenhuma mensagem encontrada</p>
             <p class="solucion_decode">Digite um texto que você deseja criptografar ou descriptografar.</p>
         </div>
      </div>
-     <div class ="copy" id ="copy">
-        <p class="p_copy"  id="text_copy"></p>
-        <button class="btn_decode" onclick="">Copiar</button>
+
+     <div class ="copy disable" id ="copy">
+
+        <p class="p_copy"  id="texto"></p>
+
+        <button class="btn_decode" onclick="Copiar();">Copiar</button>
      </div>
 </div>
 
